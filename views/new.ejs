@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 class="newHeading">Edit Your To-Do</h1>
+    <form method="post" action="/update/<%= findData._id %>?_method=PUT" class="newForm">
+        <input type="text" name="newItems" class="newData" value="<%= findData.name %> " autocomplete="off">
+        <button type="submit" class="editButton">Edit</button>
+    </form>
+    <form method="get" action="/cancel" class="cancelForm">
+        <button type="submit" class="editButton cancelButton">Cancel</button>
+    </form>
+</body>
+</html>

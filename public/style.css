@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Inter:wght@200;400&family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
+
+html {
+    background: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 800px;
+    font-family: 'Lato', 'Roboto';
+}
+
+h1,
+h2 {
+    color: #fff;
+    padding: 10px;
+}
+
+.box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+    background: #A683E3;
+    text-align: center;
+}
+
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #F1F1F1;
+}
+
+.item:last-child {
+    border-bottom: 0;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204a;
+    width: 220px;
+}
+
+form.item {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.add,
+.remove {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background: #A683E3;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 6px;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.edit:hover {
+    transform: translateY(3px);
+}
+
+.remove:hover {
+    transform: translateY(3px);
+}
+
+.remove {
+    position: relative;
+    top: 10px;
+    color: #A683E3;
+    background: transparent;
+}
+
+.editForm {
+    position: relative;
+    left: 70px;
+    top: 10px;
+}
+
+.edit {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit span {
+    font-size: 40px;
+}
+
+.remove span {
+    font-size: 35px;
+}
+
+input {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #A683E3;
+}
+
+::placeholder {
+    color: gray;
+    opacity: 1;
+}
+
+footer {
+    color: black;
+    text-align: center;
+}
+
+.newHeading {
+    text-decoration: underline;
+    text-align: center;
+    color: #A683E3;
+}
+
+.newForm {
+    height: 10em;
+    width: 17em;
+    margin: 6em auto;
+    margin-bottom: 0px;
+}
+
+.newData {
+    border-bottom: 2px solid #A683E3;
+    margin-bottom: 1.7em;
+}
+
+.editButton {
+    background: #A683E3;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 3em;
+    width: 6em;
+    border-radius: 1em;
+    box-shadow: 0px 7px 2px 2px black;
+}
+
+.editButton:active {
+    transform: translateY(5px);
+    box-shadow: 0px 2px 2px 0px black;
+}
+
+.cancelButton {
+    background: red;
+    margin-left: 12px;
+    position: relative;
+    top: -64px;
+}
+
+.cancelForm {
+    width: 1em;
+    margin: 0 auto;
+}
+
+@media (max-width:400px) and (min-width:0px){
+    p{
+        width: 150px;
+    }
+}

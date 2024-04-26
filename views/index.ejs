@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="box" id="heading">
+        <h1>
+            <%= todayTime %>
+        </h1>
+        <h2>To-Do List</h2>
+    </div>
+    <div class="box">
+        <% newItem.forEach(function(item){ %>
+            <div class="item">
+                <form method="post" action="/delete/<%= item._id %>?_method=DELETE">
+                    <button class="remove"><span class="material-symbols-outlined"> close </span></button>
+                </form>
+                <p><%= item.name %> </p>
+                <form method="get" action="/update/<%= item._id %>" class="editForm">
+                   <button class="edit"><span class="material-symbols-outlined">edit_note</span></button>
+                </form>
+            </div>
+            <% }) %>
+                <form action="/edit" method="post" class="item">
+                    <input type="text" name="newItems" placeholder="New Item..." autocomplete="off">
+                    <button type="submit" class="add">+</button>
+                </form>
+    </div>
+</body>
+
+</html>
